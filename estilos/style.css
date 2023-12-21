@@ -1,0 +1,16 @@
+
+ /*   background: #FF4099 ;*/
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+
+
+
+}
+
+body{
+    /*Configuração para manter fixo o tamanho da imagem de fundo*/
+    background: #FF4099 ;
+    
+}
