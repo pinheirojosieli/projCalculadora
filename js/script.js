@@ -19,11 +19,10 @@ function adicionarElemento (entrada){
 
 
   function somar(){
-        num1 = eval(num1.replaceAll(',','.')); //CALCULA OS VALORES NA TELA
-        tela = document.querySelector("input#res").value = num1.toString().replace(".", ","); // MOSTRA O RESULTADO CONVERTENDO O '. 'EM  ', '  
-        sequencia = num1.toString().split(''); //ATUALIZA O ARRAY; 
-      
-        
+      num1 = eval(num1.replace(',','.')); //CALCULA OS VALORES NA TELA
+      tela = document.querySelector("input#res").value = num1.toString().replace('.',','); // MOSTRA O RESULTADO CONVERTENDO O '. 'EM  ', '  
+      sequencia = num1.toString().replace('.',',').split(''); //ATUALIZA O ARRAY; 
+     
   }
   
 
