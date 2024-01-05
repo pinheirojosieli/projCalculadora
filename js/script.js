@@ -14,24 +14,82 @@ let texto = "ABCD7EFGHIJK5LMNOPQ6RSTUVWXYZ";
 
 */
 
+
+let a =0;
+do{
+
+console.log("teste: ")
+
+
+
+
+}
+
+while (a<3){
+a++;
+
+
+}
+
+
+
+
+
+
 function quadrado (){
-      if(numCalc.indexOf("+") != -1 || numCalc.indexOf("-") != -1 || numCalc.indexOf("*") != -1 || numCalc.indexOf("/") != -1)  {     
-   
-    
-      sequencia = numCalc.split('+');
-      let part1 = sequencia.length;
+
+let tes = numTela.split('').reverse().join('');
+console.log("teste: " + tes); 
+
+
+
+
+  let part1;
+  console.log("QUADRADO: " + sequencia 
+  + " TAMANHO: " + part1   
+  + " PARTE : " + sequencia[part1-1]* sequencia[part1-1]
+
+  );
+
+
+
+
+      if(numTela.indexOf("+") != -1)  {     
+             sequencia = numTela.split('+');
+
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             /*
+        sequencia = numTela.split('-');
+        sequencia = numCalc.split('/');
+        sequencia = numCalc.split('*');*/
+       part1 = sequencia.length;
    
       console.log("QUADRADO: " + sequencia 
-      + " TIPO: " + typeof(sequencia)
       + " TAMANHO: " + part1   
-      + " PARTE : " + sequencia[part1-1]
+      + " PARTE : " + sequencia[part1-1]* sequencia[part1-1]
    
       );
    
 
 
     //  let qua = sequencia[1]
-   
+    /*console.log("QUADRADO: " + sequencia 
+    + " TIPO: " + typeof(sequencia)
+    + " TAMANHO: " + part1   
+    + " PARTE : " + sequencia[part1-1]*/
+ 
    
         /*  console.log(" TEM: " );
       console.log("VALOR NUM 1 : " + numTela);
@@ -147,11 +205,7 @@ function adicionarElemento (entrada){
         console.log("numCalc: :  " + numCalc +" TIPO " + typeof(numCalc));
        
 
-
-
-
-
-
+  
 
 
 
