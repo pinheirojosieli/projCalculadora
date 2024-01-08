@@ -5,31 +5,128 @@ let num3 = [];
 let num4 = '';
 let sequencia = [];
 
-/*
-let texto = "ABCD7EFGHIJK5LMNOPQ6RSTUVWXYZ";
-
-   let teste = [];
-   teste  = texto.split('5');
-   console.log("VALOR: " + teste);
-
-*/
 
 
-let a =0;
-do{
 
-console.log("teste: ")
+console.log( "NUMTELA: "+  numTela);
+console.log( "NUMCALC: "+  numCalc);
+console.log( "SEQUENCIA: "+  sequencia);
 
 
 
 
-}
-
-while (a<3){
-a++;
 
 
-}
+
+
+
+
+function verificarOperador (){
+
+        
+let  numCalcReverse, numSplit, numSplitReverse, numCalcNovo;
+let cont=0;
+
+            numCalcReverse = numCalc.split('').reverse().join('').toString();
+
+ 
+            for(cont; cont<= numCalcReverse.length; cont++ ){
+ 
+
+                switch (numCalcReverse[cont]){
+                 
+                 
+                  case "+":
+                  numSplit = `${numCalcReverse.split('+', 1)}`;
+                  numSplitReverse = numSplit.split('').reverse().join('');
+                  numCalcNovo = numCalc.slice(0, numCalc.length-numSplit.length);
+                  numTela = numTela.slice(0, numCalc.length-numSplit.length);
+                  
+                  cont = numCalcReverse.length;
+
+
+                break;
+
+
+
+                case "-":
+
+                numSplit = `${numCalcReverse.split('-', 1)}`;
+                numSplitReverse = numSplit.split('').reverse().join('');
+                numCalcNovo = numCalc.slice(0, numCalc.length-numSplit.length);
+                cont = numCalcReverse.length;
+
+               break;
+
+
+  
+
+               case "/":
+
+               numSplit = `${numCalcReverse.split('/', 1)}`;
+               numSplitReverse = numSplit.split('').reverse().join('');
+               numCalcNovo = numCalc.slice(0, numCalc.length-numSplit.length);
+               cont = numCalcReverse.length;
+              break;
+
+
+ 
+
+              case "*":
+
+              numSplit = `${numCalcReverse.split('*', 1)}`;
+              numSplitReverse = numSplit.split('').reverse().join('');
+              numCalcNovo = numCalc.slice(0, numCalc.length-numSplit.length);
+              cont = numCalcReverse.length;
+
+             break;
+
+
+             default:
+
+                  numSplitReverse = numCalc;
+                  
+                  numCalcNovo = '';
+                  numTela = '';
+                  console.log( "numCalcNovo: "+  numCalcNovo);
+                  console.log( "numSplitReverse: "+  numSplitReverse);
+
+                }
+
+
+            }
+ 
+            numCalc = numCalcNovo;
+  
+            /*console.log( "NUMTELA: "+  numTela);
+            console.log( "NUMC deeeeeeeeentrp: "+  numCalc);
+            console.log( "NUMCALCOOOOOOOOONCATENA: "+  numCalcNovo);*/
+            
+                     return numSplitReverse;
+
+
+             
+     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -37,111 +134,26 @@ a++;
 
 
 function quadrado (){
+  
+  let numQuadrado = verificarOperador();
 
-let tes = numTela.split('').reverse().join('');
-console.log("teste: " + tes); 
+  console.log( "NUMTELA: "+  numTela);
+  console.log( "NUMCAL: "+  numCalc);
+  console.log( "QUADRADO: "+  numQuadrado);
 
+  numQuadrado *= numQuadrado;
+  numTela += `${numQuadrado}`;
+  numCalc += `${numQuadrado}`;
+  
 
-
-
-  let part1;
-  console.log("QUADRADO: " + sequencia 
-  + " TAMANHO: " + part1   
-  + " PARTE : " + sequencia[part1-1]* sequencia[part1-1]
-
-  );
-
-
-
-
-      if(numTela.indexOf("+") != -1)  {     
-             sequencia = numTela.split('+');
-
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             
-             /*
-        sequencia = numTela.split('-');
-        sequencia = numCalc.split('/');
-        sequencia = numCalc.split('*');*/
-       part1 = sequencia.length;
-   
-      console.log("QUADRADO: " + sequencia 
-      + " TAMANHO: " + part1   
-      + " PARTE : " + sequencia[part1-1]* sequencia[part1-1]
-   
-      );
-   
-
-
-    //  let qua = sequencia[1]
-    /*console.log("QUADRADO: " + sequencia 
-    + " TIPO: " + typeof(sequencia)
-    + " TAMANHO: " + part1   
-    + " PARTE : " + sequencia[part1-1]*/
- 
-   
-        /*  console.log(" TEM: " );
-      console.log("VALOR NUM 1 : " + numTela);
-      console.log("VALOR NUM 2 : " + numCalc );*/
-      
-      
-      } else{ // CALCULA QUANDO NÃO HÁ OPERADORES NA TELA
-        console.log("NAO TEM: " );
-        numCalc = numCalc * numCalc
-
-        console.log("NAO TEM: " + numCalc);
-      resultado(); 
-    
-      }
   
   
-  
-  
-  
-  
-  
-  
-    /*  numCalc += 'q';
-      sequencia = numCalc.split('q');
-      let part1 = sequencia.length;*/
+tela = document.querySelector("input#res").value = numTela.replace('.',',');
 
-/*
 
-      console.log("QUADRADO: " + sequencia 
-      + " TIPO: " + typeof(sequencia)
-      + " TAMANHO: " + part1   
-      + " PARTE 2 : " + sequencia[1]
-      
- 
-    
-    );
 
-*/
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -176,25 +188,32 @@ function adicionarElemento (entrada){
     tela = document.querySelector("input#res").value = numTela;
       
        
-       if(numCalc.indexOf("5") != -1) {
+       
+console.log( "NUMTELA: "+  numTela);
+console.log( "NUMCALC: "+  numCalc);
+console.log( "SEQUENCIA: "+  sequencia);
 
-       } else {
 
 
-       }
+
+
     
-    //console.log("VALOR NUM 1 : " + numTela);
-  //  console.log("VALOR NUM 2 : " + numCalc );
-    
+  
    }
 
 
 
   function resultado(){
-    
+    console.log( "NUMTELA: "+  numTela);
+    console.log( "NUMCALC: "+  numCalc);
 
-        numCalc = eval(numCalc); //CALCULA OS VALORES
+        numCalc = `${eval(numCalc)}`; //CALCULA OS VALORES
         numTela = `${numCalc}`;
+
+        console.log( "NUMTELA: "+  numTela);
+        console.log( "NUMCALC: "+  numCalc);
+       // console.log( "SEQUENCIA: "+  numQuadrado);
+
 
 
         tela = document.querySelector("input#res").value = numTela.replace('.',','); // MOSTRA O RESULTADO CONVERTENDO O '. 'EM  ', '  
@@ -230,12 +249,7 @@ function limparTela(){
   numCalc = '';
 
 
-  console.log("numTela: :  " + numTela + " TIPO "+ typeof(numTela));
-  console.log("numCalc: :  " + numCalc +" TIPO " + typeof(numCalc));
-
-
-
-  ;
+  
 
 }
 
