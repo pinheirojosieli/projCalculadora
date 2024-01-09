@@ -41,7 +41,6 @@ let cont=0;
                   numSplitReverse = numSplit.split('').reverse().join('');
                   numCalcNovo = numCalc.slice(0, numCalc.length-numSplit.length);
                   numTela = numTela.slice(0, numCalc.length-numSplit.length);
-                  
                   cont = numCalcReverse.length;
 
 
@@ -54,7 +53,9 @@ let cont=0;
                 numSplit = `${numCalcReverse.split('-', 1)}`;
                 numSplitReverse = numSplit.split('').reverse().join('');
                 numCalcNovo = numCalc.slice(0, numCalc.length-numSplit.length);
+                numTela = numTela.slice(0, numCalc.length-numSplit.length);
                 cont = numCalcReverse.length;
+
 
                break;
 
@@ -66,7 +67,9 @@ let cont=0;
                numSplit = `${numCalcReverse.split('/', 1)}`;
                numSplitReverse = numSplit.split('').reverse().join('');
                numCalcNovo = numCalc.slice(0, numCalc.length-numSplit.length);
+               numTela = numTela.slice(0, numCalc.length-numSplit.length);
                cont = numCalcReverse.length;
+
               break;
 
 
@@ -77,7 +80,9 @@ let cont=0;
               numSplit = `${numCalcReverse.split('*', 1)}`;
               numSplitReverse = numSplit.split('').reverse().join('');
               numCalcNovo = numCalc.slice(0, numCalc.length-numSplit.length);
+              numTela = numTela.slice(0, numCalc.length-numSplit.length);
               cont = numCalcReverse.length;
+
 
              break;
 
